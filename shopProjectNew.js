@@ -72,8 +72,8 @@ async function startShop() {
         await showProducts()
         const userInput = await askForInput();
         await validateInput(userInput);
-        const userResponse = await input({ message: 'Would you like to order another product? (yes/no)' }) === 'yes';
-        /* continueShopping = userResponse.toLowerCase() === 'yes' */
+        const userResponse = await input({ message: 'Would you like to order another product? (yes/no)' });
+        continueShopping = userResponse.toLowerCase() === 'yes'
     }
     console.log("Thank you for shopping with us!");
 }
